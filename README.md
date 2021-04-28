@@ -1,6 +1,6 @@
 # My work assignment Title
 
-Repository to host the project developed for 'some class', a fisrt year subject at SOMESCHOOL. Developed by Group ALPHA : [@MarcoOliveira](https://github.com/marcoamarooliveira), [add others].
+Repository to host the project developed for 'some class', a fisrt year subject at SOMESCHOOL. Developed by Group ALPHA : [@FranciscoGaspar](https://github.com/FranciscoGaspar-del), [@GonçaloOliveira](https://github.com/GSO07), [@JoãoDias](https://github.com/joaodias99).
 
 ## Short theme description
 
@@ -39,5 +39,6 @@ _Please add at least a hyperlink per Report. But you can add more, for example f
 * [REBD](doc/rebd/rebd00.md)
 
 ## Team
-* Marco Amaro Oliveira [@MarcoOliveira](https://github.com/marcoamarooliveira)
-* Other team members
+* Francisco Gaspar Rego [@FranciscoGaspar](https://github.com/FranciscoGaspar-del)
+* Gonçalo Sampaio Oliveira [@GonçaloOliveira](https://github.com/GSO07)
+* João Ricardo da Silva Dias [@JoãoDias](https://github.com/joaodias99)
