@@ -39,6 +39,6 @@ _Please add at least a hyperlink per Report. But you can add more, for example f
 * [REBD](doc/rebd/rebd00.md)
 
 ## Team
-* Francisco Gaspar Rego [@FranciscoGaspar](https://github.com/FranciscoGaspar-del)
-* Gonçalo Sampaio Oliveira [@GonçaloOliveira](https://github.com/GSO07)
-* João Ricardo da Silva Dias [@JoãoDias](https://github.com/joaodias99)
+* Francisco Gaspar Rego [@FranciscoGaspar-del](https://github.com/FranciscoGaspar-del)
+* Gonçalo Sampaio Oliveira [@GSO07](https://github.com/GSO07)
+* João Ricardo da Silva Dias [@joaodias99](https://github.com/joaodias99)
