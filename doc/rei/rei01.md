@@ -9,7 +9,7 @@ O trabalho consiste na especificação e desenvolvimento de um sistema de base d
 
 ## Modelação do problema
 
-- Um restaurante tem um número de mesas, identificadas também pelo seu devido número, que podem ser reservadas por clientes, onde cada empregado pode estar associado a várias mesas.
+- Um restaurante tem uma sala com um número de mesas, identificadas também pelo seu devido número, que podem ser reservadas por clientes, onde cada empregado pode estar associado a várias mesas.
 - Cada empregado é identificado pelo nome, número de funcionário e função.
 - Os clientes são determinados por nome, número de telefone, número de pessoas e tipo. Têm acesso a um menu onde poderão escolher aquilo que quererão comer, através do seu pedido, dependendo do stock disponível.
 - O restaurante pode fazer pedidos a fornecedores para a entrega de produtos.
