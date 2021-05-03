@@ -6,16 +6,14 @@
 [Especificação de Requisitos](rei02.md)  
 [Esquema Conceptual](rei03.md)  
 
-## Group _xx_
+## Group _01_
 
-_Don't forget to add the group elements_
-
-* Marco Amaro Oliveira [@MarcoOliveira](https://github.com/marcoamarooliveira)
-* Other team members
+* Francisco Gaspar Rego [@FranciscoGaspar](https://github.com/FranciscoGaspar-del)
+* Gonçalo Sampaio Oliveira [@GoncaloOliveira](https://github.com/GSO07)
+* João Ricardo da Silva Dias [@JoaoDias](https://github.com/joaodias99)
 
 
 
 ---
-_You can add a footer menu for navigation_ 
-< Previous | [^ Main](https://github.com/exemploTrabalho/reportSIBD/) | [Next >](rei01.md)
+< Previous | [^ Main](https://github.com/SIBD01/TrabalhoFinal) | [Next >](rei01.md)
 :--- | :---: | ---: 
