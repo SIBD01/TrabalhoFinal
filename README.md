@@ -1,6 +1,6 @@
 # My work assignment Title
 
-Repositório referente ao projeto desenvolvido no âmbito de Sistemas de Informação e Bases de Dados, disciplina de segundo ano do curso de Tecnologias de Comunicação Multimédia (TCM) do Instituto Universitário da Maia - ISMAI. Desenvolvido pelo Grupo 01: [@FranciscoGaspar](https://github.com/FranciscoGaspar-del), [@GonçaloOliveira](https://github.com/GSO07), [@JoãoDias](https://github.com/joaodias99).
+Repositório referente ao projeto desenvolvido no âmbito de Sistemas de Informação e Bases de Dados, disciplina de segundo ano do curso de Tecnologias de Comunicação Multimédia (TCM) do Instituto Universitário da Maia - ISMAI. Desenvolvido pelo Grupo 01: [@FranciscoGaspar](https://github.com/FranciscoGaspar-del), [@GoncaloOliveira](https://github.com/GSO07), [@JoãoDias](https://github.com/joaodias99).
 
 ## Pequena descrição do tema
 
