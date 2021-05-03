@@ -42,22 +42,26 @@ Cada cliente faz uma reserva.
 
 Um cliente realiza um pedido.
 
-- (EMPREGADO,ENCOMENDA)
+- faz (EMPREGADO,ENCOMENDA)
 
+Um empregado faz uma encomenda.
 
+- atribuidoA (EMPREGADO,RESERVA)
 
-- (EMPREGADO,RESERVA)
+Um empregado é atribuído a uma reserva.
 
+- recebeUm (EMPREGADO, PEDIDO)
 
+Um empregado recebe um pedido.
 
-- (ENCOMENDA,FORNECEDOR)
+- entreguePor (ENCOMENDA,FORNECEDOR)
 
-Exemplo de inserção de uma imagem:   
+Uma encomenda é entregue por um fornecedor.
+
+Diagrama de Peter Chen (Modelo Entidade-relação):   
 ![An alternative description](images/image02.png)   
 
 Always add a description to help the user understand the figure 
-
-NOTA: Cada entidade-tipo e cada associação devem ter um pequeno texto – um ou dois parágrafos – para descrever esse elemento do modelo e os seus atributos)
 
 ## Regras de negócio adicionais (Restrições)
 _(Apresentar uma lista detalhada das regras e restrições não possíveis de representar no modelo E/A, que visam a manutenção da consistência e integridade da modelação do problema)_
