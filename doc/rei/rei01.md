@@ -15,6 +15,7 @@ empregado pode estar associado a várias mesas.
 - Os clientes são determinados por nome, número de telefone, número de pessoas e tipo. Têm
 acesso a um menu onde poderão escolher aquilo que quererão comer, através do seu pedido, dependendo do stock
 disponível.
+- O restaurante pode fazer pedidos a fornecedores para a entrega de produtos 
 - Os fornecedores são responsáveis pela entrega dos alimentos e são divididos por tipo. 
 
 
