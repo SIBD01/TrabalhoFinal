@@ -55,7 +55,7 @@ Um empregado recebe um pedido.
 Uma encomenda é entregue por um fornecedor.
 
 ### Diagrama de Peter Chen (Modelo Entidade-relação):   
-![An alternative description](images/diagrama.png)
+![An alternative description](images/Diagrama.png)
 
 Always add a description to help the user understand the figure 
 
