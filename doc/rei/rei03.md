@@ -20,10 +20,6 @@ Cada empregado é identificado por nome, número de funcionário e função (rec
 
 Cada pedido é feito com base em entrada, bebida, prato, sobremesa e café.
 
-- STOCK(tipoProduto, quantidade)
-
-O stock é obtido através da disponibilidade e quantidade dos produtos contidos no restaurante.
-
 - FORNECEDOR(tipo)
 
 Cada fornecedor é identificado pelo seu tipo.
