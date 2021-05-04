@@ -10,8 +10,8 @@ O trabalho consiste na especificação e desenvolvimento de um sistema de base d
 
 - Um restaurante tem uma sala com um número de mesas, identificadas também pelo seu devido número, que podem ser reservadas por clientes, onde cada empregado pode estar associado a várias mesas.
 - Cada empregado é identificado pelo nome, número de funcionário e função.
-- Os clientes são determinados por nome, número de telefone, número de pessoas e tipo. Têm acesso a um menu onde poderão escolher aquilo que quererão comer, através do seu pedido, dependendo do stock disponível.
-- O restaurante pode fazer pedidos a fornecedores para a entrega de produtos.
+- Os clientes são determinados por nome e número de telefone. Têm acesso a um menu onde poderão escolher aquilo que quererão comer, através do seu pedido.
+- O restaurante pode fazer encomendas a fornecedores para a entrega de produtos.
 - Os fornecedores são responsáveis pela entrega dos alimentos e são divididos por tipo. 
 
 
