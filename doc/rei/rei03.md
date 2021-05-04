@@ -10,7 +10,7 @@ Cada cliente está identificado por nome (primeiro e último) e número de telef
 
 - RESERVA(dia, hora, nrMesa, nrPessoas)
 
-Cada reserva é identificado por dia, hora e número de pessoas.
+Cada reserva é identificada por dia, hora e número de pessoas.
 
 - EMPREGADO(nome, numero, funcao)
 
