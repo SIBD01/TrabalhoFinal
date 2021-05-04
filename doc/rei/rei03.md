@@ -30,27 +30,27 @@ A encomenda efetuada faz o re-stock aos produtos do restaurante.
 
 ### Associações:
 
-- efetua (CLIENTE,RESERVA)
+- efetua (CLIENTE,RESERVA) 1:N parcial/total
 
 Cada cliente faz uma reserva.
 
-- realiza (CLIENTE,PEDIDO)
+- realiza (CLIENTE,PEDIDO) 1:N parcial/total
 
 Um cliente realiza um pedido.
 
-- faz (EMPREGADO,ENCOMENDA)
+- faz (EMPREGADO,ENCOMENDA) N:M parcial/total
 
 Um empregado faz uma encomenda.
 
-- atribuidoA (EMPREGADO,RESERVA)
+- atribuidoA (EMPREGADO,RESERVA) 1:N parcial/parcial
 
 Um empregado é atribuído a uma reserva.
 
-- recebeUm (EMPREGADO, PEDIDO)
+- recebeUm (EMPREGADO,PEDIDO) 1:N parcial/parcial
 
 Um empregado recebe um pedido.
 
-- entreguePor (ENCOMENDA,FORNECEDOR)
+- entreguePor (ENCOMENDA,FORNECEDOR) N:M total/parcial
 
 Uma encomenda é entregue por um fornecedor.
 
