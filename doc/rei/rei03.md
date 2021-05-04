@@ -57,7 +57,7 @@ Uma encomenda é entregue por um fornecedor.
 ### Diagrama de Peter Chen (Modelo Entidade-relação):   
 ![An alternative description](images/Diagrama.png)
 
-Always add a description to help the user understand the figure 
+Modelo EA da Base de Dados do restaurante 
 
 ## Regras de negócio adicionais (Restrições)
 _(Apresentar uma lista detalhada das regras e restrições não possíveis de representar no modelo E/A, que visam a manutenção da consistência e integridade da modelação do problema)_
