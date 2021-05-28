@@ -8,14 +8,12 @@
 :[Esquema Relacional](rebd04.md)  
 :[SQL](rebd05.md)  
 
-## Group _xx_
+## Group _01_
 
-_(Don't forget to add the group elements)_
-
-* Marco Amaro Oliveira [@MarcoOliveira](https://github.com/marcoamarooliveira)
-* Other team members
+* Francisco Gaspar Rego [@FranciscoGaspar](https://github.com/FranciscoGaspar-del)
+* Gonçalo Sampaio Oliveira [@GoncaloOliveira](https://github.com/GSO07)
+* João Ricardo da Silva Dias [@JoaoDias](https://github.com/joaodias99)
 
 ---
-_You can add a footer menu for navigation_ 
-< Previous | [^ Main](https://github.com/exemploTrabalho/reportSIBD/) | [Next >](rebd01.md)
+< Previous | [^ Main](https://github.com/SIBD01/TrabalhoFinal) | [Next >](rebd01.md)
 :--- | :---: | ---: 
