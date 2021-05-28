@@ -3,6 +3,8 @@
 ## Modelo E/A
 ![diagrama](images/Diagrama_REBD.png)
 
+O diagrama foi atualizado em relação ao REI.
+
 ## Regras de negócio adicionais (Restrições)
 - Cada empregado de mesa fica, no máximo, encarregue de 4 mesas.
 - Cada mesa fica ligada a reserva "X". 
