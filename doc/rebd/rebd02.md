@@ -7,5 +7,5 @@ _(Introduzir o diagrama do modelo Entidade-Associação. Podem apresentar altera
 _(Apresentar uma lista detalhada das regras e restrições não possíveis de representar no modelo EA, que visam a manutenção da consistência e integridade da modelação do problema. Podem ser introduzidas regras não apresentadas no REI)_
 
 ---
-[< Previous](rebd01.md) | [^ Main](https://github.com/exemploTrabalho/reportSIBD/) | [Next >](rebd03.md)
+[< Previous](rebd01.md) | [^ Main](https://github.com/SIBD01/TrabalhoFinal) | [Next >](rebd03.md)
 :--- | :---: | ---: 
