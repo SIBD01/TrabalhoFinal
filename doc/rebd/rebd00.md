@@ -8,7 +8,7 @@
 :[Esquema Relacional](rebd04.md)  
 :[SQL](rebd05.md)  
 
-## Group _01_
+## Grupo _01_
 
 * Francisco Gaspar Rego [@FranciscoGaspar](https://github.com/FranciscoGaspar-del)
 * Gonçalo Sampaio Oliveira [@GoncaloOliveira](https://github.com/GSO07)
