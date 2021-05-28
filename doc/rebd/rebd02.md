@@ -1,7 +1,7 @@
 # C2 : Esquema conceptual
 
 ## Modelo E/A
-![diagrama](images/Diagrama.png)
+![diagrama](images/Diagrama_REBD.png)
 
 ## Regras de negócio adicionais (Restrições)
 - Cada empregado de mesa fica, no máximo, encarregue de 4 mesas.
