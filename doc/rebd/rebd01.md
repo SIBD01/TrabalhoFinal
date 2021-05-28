@@ -7,7 +7,17 @@ O trabalho consiste na especificação e desenvolvimento de um sistema de base d
 
 ## Descrição dos requisitos do utilizador
 
-_(Descrever os tipos de utilizadores (actores) do sistema de informação e as funcionalidade (casos de uso) a que estes terão acesso. Permite refinar os requisitos apresentados no REI.)_
+As opções disponíveis no sistema criado para o restaurante dependerão do tipo de função de cada ator, sendo que essas mesmas funções são: rececionista, chefe de sala, empregado de mesa, chef, ajudante de cozinha, fornecedores e cliente.
+
+Os atores terão acesso às seguintes funcionalidades:
+
+- Rececionista: acesso total às reservas;
+- Chefe de Sala: acesso às reservas, pedidos;
+- Empregado de Mesa: acesso aos pedidos;
+- Chef: acesso aos pedidos;
+- Ajudante de Cozinha: acesso aos pedidos;
+- Fornecedores: acesso a pedidos de re-stock de produtos;
+- Clientes: acesso à reserva efetuada.
 
 
 ---
