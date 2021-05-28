@@ -7,5 +7,5 @@ _(Apresentar as relações obtidas da transformação direta a partir do modelo 
 _(Apresentar o estudo da normalização das relações obtidas na secção anterior. Desnormalizar se necessário.)_
 
 ---
-[< Previous](rebd02.md) | [^ Main](https://github.com/exemploTrabalho/reportSIBD/) | [Next >](rebd04.md)
+[< Previous](rebd02.md) | [^ Main](https://github.com/SIBD01/TrabalhoFinal) | [Next >](rebd04.md)
 :--- | :---: | ---: 
