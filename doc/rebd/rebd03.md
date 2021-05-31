@@ -9,7 +9,7 @@ Reserva (dia, hora, <ins>nrMesa</ins>, nrPessoas, #nrTelefone -> Cliente)
 
 Pedido (entrada, bebida, prato, sobremesa, cafe, <ins>nrPedido<ins>, <ins>#nrTelefone</ins> -> Cliente)
 
-Empregado (função, <ins>nrEmpregado</ins>, nome, nrCC, <ins>#nrPedido</ins> -> Pedido, <ins>#nrMesa<ins> -> Reserva)
+Empregado (função, <ins>nrEmpregado</ins>, nome, nrCC, <ins>#nrPedido</ins> -> Pedido, <ins>#nrMesa</ins> -> Reserva)
 
 Encomenda (produto, <ins>produtoCod</ins>, encomendaQuantidade, <ins>nrEncomenda</ins>)
 
