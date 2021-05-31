@@ -7,7 +7,7 @@ Cliente (<ins>nrTelefone</ins>, nome, email)
 
 Reserva (dia, hora, <ins>nrMesa</ins>, nrPessoas, #nrTelefone -> Cliente)
 
-Pedido (entrada, bebida, prato, sobremesa, cafe, <ins>nrPedido<ins>, <ins>#nrTelefone</ins> -> Cliente)
+Pedido (entrada, bebida, prato, sobremesa, cafe, <ins>nrPedido</ins>, <ins>#nrTelefone</ins> -> Cliente)
 
 Empregado (função, nrEmpregado, nome, <ins>nrCC</ins>, <ins>#nrPedido</ins> -> Pedido, <ins>#nrMesa</ins> -> Reserva)
 
