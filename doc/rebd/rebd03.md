@@ -22,7 +22,7 @@ Encomenda_Fornecedor (<ins>#produtoCod</ins> -> Encomenda, <ins>#numero</ins> ->
   
   ## Normalização do Esquema Relacional
   
-# Pedido (entrada, bebida, prato, sobremesa, cafe, <ins>nrPedido</ins>, <ins>#nrTelefone</ins> -> Cliente)
+### Pedido (entrada, bebida, prato, sobremesa, cafe, <ins>nrPedido</ins>, <ins>#nrTelefone</ins> -> Cliente)
   DF1: nrPedido -> entrada, bebida, prato, sobremesa, café
   
   1NF
@@ -45,7 +45,7 @@ Encomenda_Fornecedor (<ins>#produtoCod</ins> -> Encomenda, <ins>#numero</ins> ->
   
   
   
-# Empregado (função, <ins>nrEmpregado</ins>, nome, nrCC, <ins>#nrPedido</ins> -> Pedido, <ins>#nrMesa</ins> -> Reserva)
+### Empregado (função, <ins>nrEmpregado</ins>, nome, nrCC, <ins>#nrPedido</ins> -> Pedido, <ins>#nrMesa</ins> -> Reserva)
   DF1: nrEmpregado -> função, nome, nrCC
   
   1NF
@@ -68,7 +68,7 @@ Encomenda_Fornecedor (<ins>#produtoCod</ins> -> Encomenda, <ins>#numero</ins> ->
   
   
   
-# Reserva (dia, hora, <ins>nrMesa</ins>, nrPessoas, #nrTelefone -> Cliente)
+### Reserva (dia, hora, <ins>nrMesa</ins>, nrPessoas, #nrTelefone -> Cliente)
   DF1: nrMesa -> dia, hora, nrPessoas
   
   1NF
@@ -91,7 +91,7 @@ Encomenda_Fornecedor (<ins>#produtoCod</ins> -> Encomenda, <ins>#numero</ins> ->
   
   
   
-# Encomenda (produto, produtoCod, encomendaQuantidade, nrEncomenda)
+### Encomenda (produto, produtoCod, encomendaQuantidade, nrEncomenda)
   DF1: produtoCod -> produto
   
   DF2: nrEncomenda produtoCod -> encomendaQuantidade
@@ -120,7 +120,7 @@ Encomenda_Fornecedor (<ins>#produtoCod</ins> -> Encomenda, <ins>#numero</ins> ->
   
   
   
-# Fornecedor (<ins>numero</ins>, tipo, nomeEmpresa)
+### Fornecedor (<ins>numero</ins>, tipo, nomeEmpresa)
 
   DF1: numero -> nomeEmpresa
 
