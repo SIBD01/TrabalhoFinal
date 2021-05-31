@@ -21,8 +21,140 @@ Encomenda_Fornecedor (<ins>#produtoCod</ins> -> Encomenda, <ins>#numero</ins> ->
 
   
   ## Normalização do Esquema Relacional
-_(Apresentar o estudo da normalização das relações obtidas na secção anterior. Desnormalizar se necessário.)_
+  
+# Pedido (entrada, bebida, prato, sobremesa, cafe, <ins>nrPedido</ins>, <ins>#nrTelefone</ins> -> Cliente)
+  DF1: nrPedido -> entrada, bebida, prato, sobremesa, café
+  
+  1NF
+  
+  Pedido (entrada, bebida, prato, sobremesa, cafe, <ins>nrPedido</ins>, <ins>#nrTelefone</ins> -> Cliente)
+  
+  Chaves Candidatas: (nrPedido, nrTelefone)
+  
+  2NF
+  
+  Pedido (<ins>#nrPedido</ins> -> Info_Pedido, <ins>#nrTelefone</ins> -> Cliente)
+  
+  Chaves Candidatas: (nrPedido, nrTelefone)
+  
+  Info_Pedido (<ins>nrPedido</ins>, entrada, bebida, prato, sobremesa, café)
+  
+  Chaves Candidatas: (nrPedido)
+  
+  Já se encontra na 3NF e BCNF.
+  
+  
+  
+# Empregado (função, <ins>nrEmpregado</ins>, nome, nrCC, <ins>#nrPedido</ins> -> Pedido, <ins>#nrMesa</ins> -> Reserva)
+  DF1: nrEmpregado -> função, nome, nrCC
+  
+  1NF
+  
+  Empregado (função, <ins>nrEmpregado</ins>, nome, nrCC, <ins>#nrPedido</ins> -> Pedido, <ins>#nrMesa</ins> -> Reserva)
+  
+  Chaves Candidatas: (nrEmpregado, nrPedido, nrMesa)
+  
+  2NF
+  
+  Empregado (<ins>#nrEmpregado</ins> - > Info_Empregado, <ins>#nrPedido</ins> -> Pedido, <ins>#nrMesa</ins> -> Reserva)
+  
+  Chaves Candidatas: (nrEmpregado, nrPedido, nrMesa)
+  
+  Info_Empregado (<ins>nrEmpregado</ins>, função, nome, nrCC)
+  
+  Chaves Candidatas: (nrEmpregado)
+  
+  Já se encontra na 3NF e BCNF.
+  
+  
+  
+# Reserva (dia, hora, <ins>nrMesa</ins>, nrPessoas, #nrTelefone -> Cliente)
+  DF1: nrMesa -> dia, hora, nrPessoas
+  
+  1NF
+  
+  Reserva (dia, hora, <ins>nrMesa</ins>, nrPessoas, <ins>#nrTelefone</ins> -> Cliente)
+  
+  Chaves Candidatas: (nrMesa, nrTelefone)
+  
+  2NF
+  
+  Reserva (<ins>#nrMesa</ins> -> Info_Mesa, #nrTelefone -> Cliente)
+  
+  Chaves Candidatas: (nrMesa, nrTelefone)
+  
+  Info_Mesa (<ins>nrMesa</ins>, dia, hora, nrPessoas)
+  
+  Chaves Candidatas: (nrMesa)
+  
+  Já se encontra na 3NF e BCNF.
+  
+  
+  
+# Encomenda (produto, produtoCod, encomendaQuantidade, nrEncomenda)
+  DF1: produtoCod -> produto
+  
+  DF2: nrEncomenda produtoCod -> encomendaQuantidade
+  
+  1NF
+  
+  Encomenda (produto, <ins>produtoCod</ins>, encomendaQuantidade, <ins>nrEncomenda</ins>)
+  
+  Chaves Candidatas: (produtoCod)
+  
+  2NF
+  
+  Encomenda (<ins>nrEncomenda</ins>)
+  
+  Chaves Candidatas: (nrEncomenda)
+  
+  LinhaEncomenda (<ins>#produtoCod</ins> -> Produto, encomendaQuantidade, <ins>#nrEncomenda</ins> -> Encomenda)
+  
+  Chaves Candidatas: (produtoCod, nrEncomenda)
+  
+  Produto (<ins>produtoCod</ins>, produto)
+  
+  Chaves Candidatas: (produtoCod)
+  
+  Já se encontra na 3NF e BCNF.
+  
+  
+  
+# Fornecedor (<ins>numero</ins>, tipo, nomeEmpresa)
 
----
-[< Previous](rebd02.md) | [^ Main](https://github.com/SIBD01/TrabalhoFinal) | [Next >](rebd04.md)
-:--- | :---: | ---: 
+  DF1: numero -> nomeEmpresa
+
+  DF2: nomeEmpresa -> tipo
+
+  1NF
+
+  Fornecedor (<ins>#numero</ins> -> Empresa, tipo, nomeEmpresa)
+
+  Chaves Candidatas: (numero)
+
+  2NF
+
+  Fornecedor (<ins>#numero</ins> -> Empresa, tipo)
+
+  Chaves Candidatas: (numero)
+  
+  Empresa (<ins>numero</ins>, nomeEmpresa)
+
+  Chaves Candidatas: (numero)
+
+  3NF
+
+  Fornecedor (<ins>#numero</ins> -> Empresa)
+
+  Chaves Candidatas: (numero)
+
+  Empresa (<ins>numero</ins>, <ins>#nomeEmpresa</ins> -> Tipo_Empresa)
+
+  Chaves Candidatas: (numero)
+
+  Tipo_Empresa (<ins>nomeEmpresa</ins>, tipo)
+
+  Chaves Candidatas: (nomeEmpresa)
+
+  Já está na BCNF.
+  
