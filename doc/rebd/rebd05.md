@@ -8,27 +8,119 @@ _(Apresentar o SQL para criação do esquema definido acima num SGBD MySQL.)_
 ```sql
 USE `test`;
 
-DROP TABLE IF EXISTS `tabela_a`;
-DROP TABLE IF EXISTS `tabela_b`;
+DROP TABLE IF EXISTS `Cliente`;
+DROP TABLE IF EXISTS `Reserva`;
+DROP TABLE IF EXISTS `Info_Mesa`;
+DROP TABLE IF EXISTS `Pedido`;
+DROP TABLE IF EXISTS `Info_Pedido`;
+DROP TABLE IF EXISTS `Empregado`;
+DROP TABLE IF EXISTS `Info_Empregado`;
+DROP TABLE IF EXISTS `Encomenda`;
+DROP TABLE IF EXISTS `LinhaEncomenda`;
+DROP TABLE IF EXISTS `Produto`;
+DROP TABLE IF EXISTS `Fornecedor`;
+DROP TABLE IF EXISTS `Empresa`;
+DROP TABLE IF EXISTS `Tipo_Empresa`;
+DROP TABLE IF EXISTS `Empregado_Encomenda`;
+DROP TABLE IF EXISTS `Encomenda_Fornecedor`;
 
-CREATE TABLE IF NOT EXISTS `tabela_a` (
-  `model` int(4) unsigned NOT NULL,
-  `speed` int(4) unsigned NOT NULL,
-  `ram` int(3) unsigned NOT NULL,
-  `hd` float unsigned NOT NULL,
-  `screen` float unsigned NOT NULL,
-  `price` int(7) NOT NULL,
-  PRIMARY KEY (`model`)
+CREATE TABLE IF NOT EXISTS `Cliente` (
+  `nrTelefone` int(9) unsigned NOT NULL,
+  `nome` varchar(50) unsigned NOT NULL,
+  `email` nvarchar(255) unsigned NOT NULL,
+  PRIMARY KEY (`nrTelefone`)
 );
 
-CREATE TABLE IF NOT EXISTS `tabela_b` (
-  `model` int(4) unsigned NOT NULL,
-  `speed` int(4) unsigned NOT NULL,
-  `ram` int(3) unsigned NOT NULL,
-  `hd` float unsigned NOT NULL,
-  `cd` varchar(3) COLLATE latin1_bin NOT NULL,
-  `price` int(7) NOT NULL,
-  PRIMARY KEY (`model`)
+CREATE TABLE IF NOT EXISTS `Reserva` (
+  `nrMesa` int unsigned NOT NULL,
+  `nrTelefone` int(9) unsigned NOT NULL,
+  PRIMARY KEY (`nrMesa`, `nrTelefone`)
+);
+
+CREATE TABLE IF NOT EXISTS `Info_Mesa` (
+  `nrMesa` int unsigned NOT NULL,
+  `dia` date unsigned NOT NULL,
+  `hora` time unsigned NOT NULL,
+  `nrPessoas` int unsigned NOT NULL,
+  PRIMARY KEY (`nrMesa`)
+);
+
+CREATE TABLE IF NOT EXISTS `Pedido` (
+  `nrPedido` int unsigned NOT NULL AUTO_INCREMENT,
+  `nrTelefone` date unsigned NOT NULL,
+  PRIMARY KEY (`nrPedido`, `nrTelefone`)
+);
+
+CREATE TABLE IF NOT EXISTS `Info_Pedido` (
+  `nrPedido` int unsigned NOT NULL AUTO_INCREMENT,
+  `entrada` varchar(50) unsigned NULL,
+  `bebida` varchar(50) unsigned NOT NULL,
+  `prato` varchar(50) unsigned NOT NULL,
+  `sobremesa` varchar(50) unsigned NULL,
+  `cafe` boolean unsigned NULL,
+  PRIMARY KEY (`nrPedido`)
+);
+
+CREATE TABLE IF NOT EXISTS `Empregado` (
+  `nrEmpregado` int unsigned NOT NULL AUTO_INCREMENT,
+  `nrPedido` int(9) unsigned NOT NULL,
+  `nrMesa` int unsigned NOT NULL,
+  PRIMARY KEY (`nrMesa`)
+);
+
+CREATE TABLE IF NOT EXISTS `Info_Empregado` (
+  `nrEmpregado` int unsigned NOT NULL AUTO_INCREMENT,
+  `função` varchar(50) unsigned NOT NULL,
+  `nome` varchar(255) unsigned NOT NULL,
+  `nrCC` int(8) unsigned NOT NULL,
+  PRIMARY KEY (`nrEmpregado`)
+);
+
+CREATE TABLE IF NOT EXISTS `Encomenda` (
+  `nrEncomenda` int unsigned NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`nrEncomenda`)
+);
+
+CREATE TABLE IF NOT EXISTS `LinhaEncomenda` (
+  `produtoCod` int unsigned NOT NULL,
+  `encomendaQuantidade` int unsigned NOT NULL,
+  `nrEncomenda` int unsigned NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`produtoCod`, `nrEncomenda`)
+);
+
+CREATE TABLE IF NOT EXISTS `Produto` (
+  `produtoCod` int unsigned NOT NULL,
+  `produto` varchar(255) unsigned NOT NULL,
+  PRIMARY KEY (`produtoCod`)
+);
+
+CREATE TABLE IF NOT EXISTS `Fornecedor` (
+  `numero` int unsigned NOT NULL,
+  PRIMARY KEY (`numero`)
+);
+
+CREATE TABLE IF NOT EXISTS `Empresa` (
+  `numero` int unsigned NOT NULL,
+  `nomeEmpresa` varchar(255) unsigned NOT NULL,
+  PRIMARY KEY (`numero`, `nomeEmpresa`)
+);
+
+CREATE TABLE IF NOT EXISTS `Tipo_Empresa` (
+  `nomeEmpresa` varchar(255) unsigned NOT NULL,
+  `tipo` varchar(255) unsigned NOT NULL,
+  PRIMARY KEY (`nomeEmpresa`)
+);
+
+CREATE TABLE IF NOT EXISTS `Empregado_Encomenda` (
+  `nrCC` int(8) unsigned NOT NULL,
+  `produtoCod` int unsigned NOT NULL,
+  PRIMARY KEY (`nrCC`, `produtoCod`)
+);
+
+CREATE TABLE IF NOT EXISTS `Encomenda_Fornecedor` (
+  `produtoCod` int unsigned NOT NULL,
+  `numero` int unsigned NOT NULL,
+  PRIMARY KEY (`produtoCod`, `numero`)
 );
 ```
 
