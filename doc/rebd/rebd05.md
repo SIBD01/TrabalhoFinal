@@ -128,18 +128,18 @@ CREATE TABLE IF NOT EXISTS `Encomenda_Fornecedor` (
 ```sql
 INSERT INTO info_mesa VALUES (7, '10/06/2021', '20:30:00', 4)
 ```
-Este INSERT é referente a uma nova reserva efetuada pelo cliente, com identificação da mesa, o número de pessoas, dia e hora.
+Este exemplo de INSERT é referente a uma nova reserva efetuada pelo cliente, com identificação da mesa, o número de pessoas, dia e hora.
 
 ```sql
 UPDATE Cliente SET nrTelefone = 912345678
 ```
-Este UPDATE atualiza o número de telefone do cliente.
+Este exemplo de UPDATE atualiza o número de telefone do cliente.
 
 ```sql
 INSERT INTO Reserva VALUES (4, 911232454)
 DELETE FROM Reserva WHERE nrMesa = 4 AND nrTelefone = 911232454
 ```
-Este INSERT permite que seja inserida na base de dados uma nova reserva feita pelo cliente. Posteriormente, uma query que demonstra o cancelamento da mesma reserva.
+Este exemplo de INSERT permite que seja inserida na base de dados uma nova reserva feita pelo cliente. Posteriormente, uma query que demonstra o cancelamento da mesma reserva.
 
 ---
 [< Previous](rebd04.md) | [^ Main](https://github.com/SIBD01/TrabalhoFinal) | Next >
