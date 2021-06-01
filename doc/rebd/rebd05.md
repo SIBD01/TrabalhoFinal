@@ -125,7 +125,16 @@ CREATE TABLE IF NOT EXISTS `Encomenda_Fornecedor` (
 
 ## DML
 
-_(Apresentar exemplos dos pedidos SQL à base de dados que demonstrem o cumprimento dos requisitos identificados. Para cada query apresentar numa breve descrição do requisito que pretende resolver e do resultado espectável.)_
+```sql
+INSERT INTO info_mesa VALUES (7, '10/06/2021', '20:30:00', 4)
+```
+Este INSERT é referente a uma nova reserva efetuada pelo cliente, com identificação da mesa, o número de pessoas, dia e hora.
+
+```sql
+UPDATE Cliente SET nrTelefone = 912345678
+```
+Este UPDATE atualiza o número de telefone do cliente.
+
 
 ---
 [< Previous](rebd04.md) | [^ Main](https://github.com/SIBD01/TrabalhoFinal) | Next >
