@@ -2,7 +2,6 @@
 
 ## DDL
 
-_(Apresentar o SQL para criação do esquema definido acima num SGBD MySQL.)_
 
 
 ```sql
