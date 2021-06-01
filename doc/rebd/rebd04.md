@@ -3,7 +3,9 @@ _(Apresentar o esquema físico da Base de Dados. Para cada relação resultante,
 
 - [Relações](#relações)
   - [Cliente](#cliente)
-  - [Tabela_b](#tabela_b)
+  - [Reserva](#reserva)
+  - [Info_Mesa](#info_mesa)
+  - [Pedido](#pedido)
 - [Vistas](#vistas)
 
 ## Relações
@@ -18,9 +20,9 @@ Tabela com informações sobre o cliente.
 
 | Nome     | Descrição                 | Domínio     | por Omissão | Automático | Nulo |
 | :------- | :------------------------ | :---------- | :---------- | :--------- | :--- |
-| nrTelefone       | identificador da tabela Cliente | BIGINT      | -           | Sim        | Não  |
-| nome     | Data do registo           | DATE        | now()       | Não        | Não  |
-| email     | Nome do registo           | VARCHAR(50) | -           | Não        | Não  |
+| nrTelefone       | identificador da tabela Cliente | INT(9)      | -           | Não        | Não  |
+| nome     | Nome do cliente           | VARCHAR(50)        | -       | Não        | Não  |
+| email     | Email do cliente           | NVARCHAR(255) | -           | Não        | Não  |
 
 
 #### RESTRIÇÕES DE INTEGRIDADE <!-- omit in toc -->
@@ -29,49 +31,21 @@ Tabela com informações sobre o cliente.
 
 | Coluna(s) |
 | --------- |
-| id        |
+| nrTelefone        |
 
-- **Unicidade** (valores únicos)*:
 
-| Nome        | Coluna(s) | Indexar |
-| ----------- | --------- | ------- |
-| nome_unique | nome      | Sim     |
-
-- **Referêncial** (chaves estrangeiras)*:
-
-| Nome  | Coluna(s) | Tabela referênciada | Coluna(s) referênciada(s) | Indexar |
-| ----- | --------- | ------------------- | ------------------------- | ------- |
-| ta_fk | tipo      | Tabela_c            | id                        | Não     |
-
-- **Atributos** (check)*:
-
-| Nome | Coluna(s) | condição |
-| ---- | --------- | -------- |
-|      |           |          |
-
-- **Outros Indices***:
-
-| Nome | Coluna(s) |
-| ---- | --------- |
-|      |           |
-
-  *Remover se não existir.
-
-### Tabela_b
+### Reserva
 
 #### DESCRIÇÃO <!-- omit in toc -->
 
-Descrição da Tabela B
+Tabela sobre a reserva.
 
 #### COLUNAS <!-- omit in toc -->
 
 | Nome     | Descrição                 | Domínio     | por Omissão | Automático | Nulo |
 | :------- | :------------------------ | :---------- | :---------- | :--------- | :--- |
-| id       | identificador da tabela A | BIGINT      | -           | Sim        | Não  |
-| data     | Data do registo           | DATE        | now()       | Não        | Não  |
-| nome     | Nome do registo           | VARCHAR(50) | -           | Não        | Não  |
-| conteudo | Conteudo do documento     | TEXT        | -           | Não        | Sim  |
-| tipo     | tipo de testes            | BIGINT      | -           | Não        | Sim  |
+| nrMesa       | identificador da mesa no restaurante | INT      | -           | Não        | Não  |
+| nrTelefone     | número de telefone do cliente           | INT(9)        | -       | Não        | Não  |
 
 #### RESTRIÇÕES DE INTEGRIDADE <!-- omit in toc -->
 
@@ -79,33 +53,70 @@ Descrição da Tabela B
 
 | Coluna(s) |
 | --------- |
-| id        |
-
-- **Unicidade** (valores únicos)*:
-
-| Nome        | Coluna(s) | Indexar |
-| ----------- | --------- | ------- |
-| nome_unique | nome      | Sim     |
+| nrMesa        |
+| nrTelefone        |
 
 - **Referêncial** (chaves estrangeiras)*:
 
 | Nome  | Coluna(s) | Tabela referênciada | Coluna(s) referênciada(s) | Indexar |
 | ----- | --------- | ------------------- | ------------------------- | ------- |
-| ta_fk | tipo      | Tabela_c            | id                        | Não     |
+| mesa | nrMesa      | Info_Mesa            | nrMesa                        | Não     |
+| nr_cliente | nrTelefone      | Cliente            | nrTelefone                        | Não     |
 
-- **Atributos** (check)*:
 
-| Nome | Coluna(s) | condição |
-| ---- | --------- | -------- |
-|      |           |          |
+### Info_Mesa
 
-- **Outros Indices***:
+#### DESCRIÇÃO <!-- omit in toc -->
 
-| Nome | Coluna(s) |
-| ---- | --------- |
-|      |           |
+Tabela com informações sobre a mesa.
 
-  *Remover se não existir.
+#### COLUNAS <!-- omit in toc -->
+
+| Nome     | Descrição                 | Domínio     | por Omissão | Automático | Nulo |
+| :------- | :------------------------ | :---------- | :---------- | :--------- | :--- |
+| nrMesa       | identificador da mesa no restaurante | INT      | -           | Não        | Não  |
+| dia     | dia da reserva           | DATE        | now()       | Não        | Não  |
+| hora     | hora da reserva           | TIME        | now()       | Não        | Não  |
+| nrPessoas     | número de pessoas na mesa           | INT        | -       | Não        | Não  |
+
+#### RESTRIÇÕES DE INTEGRIDADE <!-- omit in toc -->
+
+- **Chave Primária**: 
+
+| Coluna(s) |
+| --------- |
+| nrMesa        |
+
+
+### Pedido
+
+#### DESCRIÇÃO <!-- omit in toc -->
+
+Tabela acerca do pedido.
+
+#### COLUNAS <!-- omit in toc -->
+
+| Nome     | Descrição                 | Domínio     | por Omissão | Automático | Nulo |
+| :------- | :------------------------ | :---------- | :---------- | :--------- | :--- |
+| nrPedido       | número do pedido | INT      | -           | Sim        | Não  |
+| nrTelefone     | número de telefone do cliente           | INT(9)        | -       | Não        | Não  |
+
+#### RESTRIÇÕES DE INTEGRIDADE <!-- omit in toc -->
+
+- **Chave Primária**: 
+
+| Coluna(s) |
+| --------- |
+| nrMesa        |
+| nrTelefone        |
+
+- **Referêncial** (chaves estrangeiras)*:
+
+| Nome  | Coluna(s) | Tabela referênciada | Coluna(s) referênciada(s) | Indexar |
+| ----- | --------- | ------------------- | ------------------------- | ------- |
+| pedido | nrPedido      | Info_Pedido            | nrPedido                        | Não     |
+| nr_cliente | nrTelefone      | Cliente            | nrTelefone                        | Não     |
+
 
 ## Vistas
 
