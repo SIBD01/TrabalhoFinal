@@ -135,6 +135,11 @@ UPDATE Cliente SET nrTelefone = 912345678
 ```
 Este UPDATE atualiza o número de telefone do cliente.
 
+```sql
+INSERT INTO Reserva VALUES (4, 911232454)
+DELETE FROM Reserva WHERE nrMesa = 4 AND nrTelefone = 911232454
+```
+Este INSERT permite que seja inserida na base de dados uma nova reserva feita pelo cliente. Posteriormente, uma query que demonstra o cancelamento da mesma reserva.
 
 ---
 [< Previous](rebd04.md) | [^ Main](https://github.com/SIBD01/TrabalhoFinal) | Next >
