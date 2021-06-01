@@ -91,7 +91,7 @@ Encomenda_Fornecedor (<ins>#produtoCod</ins> -> Encomenda, <ins>#numero</ins> ->
   
   
   
-### Encomenda (produto, produtoCod, encomendaQuantidade, nrEncomenda)
+### Encomenda (produto, <ins>produtoCod</ins>, encomendaQuantidade, nrEncomenda)
   DF1: produtoCod -> produto
   
   DF2: nrEncomenda produtoCod -> encomendaQuantidade
