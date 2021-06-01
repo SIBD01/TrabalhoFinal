@@ -2,23 +2,23 @@
 _(Apresentar o esquema físico da Base de Dados. Para cada relação resultante, apresente a descrição da tabela correspondente usando o exemplo apresentado.)_
 
 - [Relações](#relações)
-  - [Tabela_a](#tabela_a)
+  - [Cliente](#cliente)
   - [Tabela_b](#tabela_b)
 - [Vistas](#vistas)
 
 ## Relações
 
-### Tabela_a
+### Cliente
 
 #### DESCRIÇÃO <!-- omit in toc -->
 
-Descrição da Tabela A
+Tabela com informações sobre o cliente.
 
 #### COLUNAS <!-- omit in toc -->
 
 | Nome     | Descrição                 | Domínio     | por Omissão | Automático | Nulo |
 | :------- | :------------------------ | :---------- | :---------- | :--------- | :--- |
-| id       | identificador da tabela A | BIGINT      | -           | Sim        | Não  |
+| nrTelefone       | identificador da tabela A | BIGINT      | -           | Sim        | Não  |
 | data     | Data do registo           | DATE        | now()       | Não        | Não  |
 | nome     | Nome do registo           | VARCHAR(50) | -           | Não        | Não  |
 | conteudo | Conteudo do documento     | TEXT        | -           | Não        | Sim  |
