@@ -141,6 +141,13 @@ DELETE FROM Reserva WHERE nrMesa = 4 AND nrTelefone = 911232454
 ```
 Este exemplo de INSERT permite que seja inserida na base de dados uma nova reserva feita pelo cliente. Posteriormente, uma query que demonstra o cancelamento da mesma reserva.
 
+```sql
+INSERT INTO Info_Empregado VALUES (18, ‘Empregado de mesa’, ‘Joaquim Alberto’, 46516451)
+UPDATE Info_Empregado SET função = ‘Chefe de Sala’
+DELETE FROM Info_Empregado WHERE nrEmpregado = 18
+```
+Este exemplo de INSERT, UPDATE e DELETE é referente à entrada de um novo empregado do restaurante na base de dados, que posteriormente é atualizado e promovido de empregado de mesa para chefe de sala. Em caso de despedimento ou saída do restaurante, pode ser realizado o exemplo da função DELETE na base de dados para apagar todas as informações do empregado em específico.
+
 ---
 [< Previous](rebd04.md) | [^ Main](https://github.com/SIBD01/TrabalhoFinal) | Next >
 :--- | :---: | ---: 
