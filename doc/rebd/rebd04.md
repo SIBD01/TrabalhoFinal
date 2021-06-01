@@ -18,11 +18,10 @@ Tabela com informações sobre o cliente.
 
 | Nome     | Descrição                 | Domínio     | por Omissão | Automático | Nulo |
 | :------- | :------------------------ | :---------- | :---------- | :--------- | :--- |
-| nrTelefone       | identificador da tabela A | BIGINT      | -           | Sim        | Não  |
-| data     | Data do registo           | DATE        | now()       | Não        | Não  |
-| nome     | Nome do registo           | VARCHAR(50) | -           | Não        | Não  |
-| conteudo | Conteudo do documento     | TEXT        | -           | Não        | Sim  |
-| tipo     | tipo de testes            | BIGINT      | -           | Não        | Sim  |
+| nrTelefone       | identificador da tabela Cliente | BIGINT      | -           | Sim        | Não  |
+| nome     | Data do registo           | DATE        | now()       | Não        | Não  |
+| email     | Nome do registo           | VARCHAR(50) | -           | Não        | Não  |
+
 
 #### RESTRIÇÕES DE INTEGRIDADE <!-- omit in toc -->
 
