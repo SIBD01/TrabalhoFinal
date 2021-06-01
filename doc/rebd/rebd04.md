@@ -426,7 +426,35 @@ Tabela com informações sobre a encomenda realizada pelo fornecedor.
 
 ## Vistas
 
-_(Inserir a descrição e estrutura das vista, caso existam.)_
+```sql
+CREATE VIEW InformacaoDaMesa AS
+SELECT nrMesa, dia, hora, nrPessoas
+FROM Info_Mesa
+WHERE nrPessoas =< 4
+```
+Vista que permite ver a informação sobre uma mesa, num determinado dia a uma determinada hora e o número de pessoas é igual ou menos a 4.
+
+```sql
+CREATE VIEW PedidoDoCliente AS
+SELECT nrPedido, entrada, bebida, prato, sobremesa, cafe
+FROM Info_Pedido
+```
+Vista que permite saber o conteúdo do pedido efetuado pelo cliente.
+
+```sql
+CREATE VIEW MediaPessoasPorMesa AS
+SELECT AVG(nrPessoas)
+FROM Info_Mesa
+```
+Vista que permite ver a média do número de pessoas de todas as mesas do restaurante.
+
+```sql
+CREATE VIEW EmpregadoDeMesa AS
+SELECT função
+FROM Info_Empregado
+WHERE função = 'Empregado de mesa'
+```
+
 
 ---
 | [< Previous](rebd03.md) | [^ Main](https://github.com/SIBD01/TrabalhoFinal) | [Next >](rebd05.md) |
