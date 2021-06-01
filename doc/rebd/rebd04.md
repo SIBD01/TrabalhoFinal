@@ -450,11 +450,11 @@ Vista que permite ver a média do número de pessoas de todas as mesas do restau
 
 ```sql
 CREATE VIEW EmpregadoDeMesa AS
-SELECT função
+SELECT função, nrEmpregado, nome)
 FROM Info_Empregado
 WHERE função = 'Empregado de mesa'
 ```
-
+Vista que permite ver a identificação dos empregados de mesa.
 
 ---
 | [< Previous](rebd03.md) | [^ Main](https://github.com/SIBD01/TrabalhoFinal) | [Next >](rebd05.md) |
