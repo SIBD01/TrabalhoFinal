@@ -221,6 +221,7 @@ Tabela com informações sobre a encomenda.
 | Nome     | Descrição                 | Domínio     | por Omissão | Automático | Nulo |
 | :------- | :------------------------ | :---------- | :---------- | :--------- | :--- |
 | nrEncomenda       | número identificador da encomenda | INT      | -           | Sim        | Não  |
+| data       | data da encomenda | VARCHAR(50)      | -           | Sim        | Não  |
 
 #### RESTRIÇÕES DE INTEGRIDADE <!-- omit in toc -->
 
