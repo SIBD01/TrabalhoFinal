@@ -36,7 +36,7 @@ CREATE TABLE IF NOT EXISTS `Reserva` (
 
 CREATE TABLE IF NOT EXISTS `Info_Mesa` (
   `nrMesa` int unsigned NOT NULL,
-  `dia` int unsigned NOT NULL,
+  `dia` varchar(50) unsigned NOT NULL,
   `hora` time unsigned NOT NULL,
   `nrPessoas` int unsigned NOT NULL,
   PRIMARY KEY (`nrMesa`)
@@ -75,7 +75,7 @@ CREATE TABLE IF NOT EXISTS `Info_Empregado` (
 
 CREATE TABLE IF NOT EXISTS `Encomenda` (
   `nrEncomenda` int unsigned NOT NULL AUTO_INCREMENT,
-  `data` int unsigned NOT NULL,
+  `data` varchar(50) unsigned NOT NULL,
   PRIMARY KEY (`nrEncomenda`)
 );
 
