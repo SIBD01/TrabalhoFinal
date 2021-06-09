@@ -11,7 +11,7 @@ Pedido (entrada, bebida, prato, sobremesa, cafe, <ins>nrPedido</ins>, <ins>#nrTe
 
 Empregado (função, nrEmpregado, nome, <ins>nrCC</ins>, <ins>#nrPedido</ins> -> Pedido, <ins>#nrMesa</ins> -> Reserva)
 
-Encomenda (produto, <ins>produtoCod</ins>, encomendaQuantidade, <ins>nrEncomenda</ins>)
+Encomenda (produto, <ins>produtoCod</ins>, encomendaQuantidade, <ins>nrEncomenda</ins>, data)
 
 Fornecedor (<ins>numero</ins>, tipo, nomeEmpresa)
 
@@ -91,20 +91,20 @@ Encomenda_Fornecedor (<ins>#produtoCod</ins> -> Encomenda, <ins>#numero</ins> ->
   
   
   
-### Encomenda (produto, <ins>produtoCod</ins>, encomendaQuantidade, nrEncomenda)
+### Encomenda (produto, <ins>produtoCod</ins>, encomendaQuantidade, nrEncomenda, data)
   DF1: produtoCod -> produto
   
   DF2: nrEncomenda produtoCod -> encomendaQuantidade
   
   1NF
   
-  Encomenda (produto, <ins>produtoCod</ins>, encomendaQuantidade, <ins>nrEncomenda</ins>)
+  Encomenda (produto, <ins>produtoCod</ins>, encomendaQuantidade, <ins>nrEncomenda</ins>, data)
   
   Chaves Candidatas: (produtoCod)
   
   2NF
   
-  Encomenda (<ins>nrEncomenda</ins>)
+  Encomenda (<ins>nrEncomenda</ins>, data)
   
   Chaves Candidatas: (nrEncomenda)
   
@@ -122,41 +122,9 @@ Encomenda_Fornecedor (<ins>#produtoCod</ins> -> Encomenda, <ins>#numero</ins> ->
   
 ### Fornecedor (<ins>numero</ins>, tipo, nomeEmpresa)
 
-  DF1: numero -> nomeEmpresa
+  DF1: numero -> nomeEmpresa tipo
 
-  DF2: nomeEmpresa -> tipo
-
-  1NF
-
-  Fornecedor (<ins>#numero</ins> -> Empresa, tipo, nomeEmpresa)
-
-  Chaves Candidatas: (numero)
-
-  2NF
-
-  Fornecedor (<ins>#numero</ins> -> Empresa, tipo)
-
-  Chaves Candidatas: (numero)
-  
-  Empresa (<ins>numero</ins>, nomeEmpresa)
-
-  Chaves Candidatas: (numero)
-
-  3NF
-
-  Fornecedor (<ins>#numero</ins> -> Empresa)
-
-  Chaves Candidatas: (numero)
-
-  Empresa (<ins>numero</ins>, <ins>#nomeEmpresa</ins> -> Tipo_Empresa)
-
-  Chaves Candidatas: (numero)
-
-  Tipo_Empresa (<ins>nomeEmpresa</ins>, tipo)
-
-  Chaves Candidatas: (nomeEmpresa)
-
-  Já está na BCNF.
+  Já se encontra normalizado.
   
   ---
 [< Previous](rebd02.md) | [^ Main](https://github.com/SIBD01/TrabalhoFinal) | [Next >](rebd04.md)
