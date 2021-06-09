@@ -1,7 +1,6 @@
 # C3 : Normalização
 
 ## Relações
-_(Apresentar as relações obtidas da transformação direta a partir do modelo EA)_
 
 Cliente (<ins>nrTelefone</ins>, nome, email)
 
