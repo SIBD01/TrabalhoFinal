@@ -84,7 +84,7 @@ Tabela com informações sobre a mesa.
 | Nome     | Descrição                 | Domínio     | por Omissão | Automático | Nulo |
 | :------- | :------------------------ | :---------- | :---------- | :--------- | :--- |
 | nrMesa       | identificador da mesa no restaurante | INT      | -           | Não        | Não  |
-| dia     | dia da reserva           | DATE        | now()       | Não        | Não  |
+| dia     | dia da reserva           | VARCHAR(50)        | now()       | Não        | Não  |
 | hora     | hora da reserva           | TIME        | now()       | Não        | Não  |
 | nrPessoas     | número de pessoas na mesa           | INT        | -       | Não        | Não  |
 
