@@ -13,8 +13,6 @@
   - [LinhaEncomenda](#linhaencomenda)
   - [Produto](#produto)
   - [Fornecedor](#fornecedor)
-  - [Empresa](#empresa)
-  - [Tipo_Empresa](#tipo_empresa)
   - [Empregado_Encomenda](#empregado_encomenda)
   - [Encomenda_Fornecedor](#encomenda_fornecedor)
 - [Vistas](#vistas)
@@ -297,6 +295,8 @@ Tabela com informações sobre o fornecedor.
 | Nome     | Descrição                 | Domínio     | por Omissão | Automático | Nulo |
 | :------- | :------------------------ | :---------- | :---------- | :--------- | :--- |
 | numero       | número identificador da empresa | INT      | -           | Não        | Não  |
+| nomeEmpresa     | nome da empresa do fornecedor           | VARCHAR(255)        | -       | Não        | Não  |
+| tipo     | tipo de fornecedor           | VARCHAR(255)        | -       | Não        | Não  |
 
 #### RESTRIÇÕES DE INTEGRIDADE <!-- omit in toc -->
 
@@ -311,57 +311,6 @@ Tabela com informações sobre o fornecedor.
 | Nome  | Coluna(s) | Tabela referênciada | Coluna(s) referênciada(s) | Indexar |
 | ----- | --------- | ------------------- | ------------------------- | ------- |
 | id_empresa | numero      | Empresa            | numero                        | Não     |
-
-
-### Empresa
-
-#### DESCRIÇÃO <!-- omit in toc -->
-
-Tabela com informações sobre a empresa do fornecedor.
-
-#### COLUNAS <!-- omit in toc -->
-
-| Nome     | Descrição                 | Domínio     | por Omissão | Automático | Nulo |
-| :------- | :------------------------ | :---------- | :---------- | :--------- | :--- |
-| numero       | número identificador da empresa | INT      | -           | Não        | Não  |
-| nomeEmpresa     | nome da empresa do fornecedor           | VARCHAR(255)        | -       | Não        | Não  |
-
-#### RESTRIÇÕES DE INTEGRIDADE <!-- omit in toc -->
-
-- **Chave Primária**: 
-
-| Coluna(s) |
-| --------- |
-| numero       |
-| nomeEmpresa        |
-
-- **Referêncial** (chaves estrangeiras)*:
-
-| Nome  | Coluna(s) | Tabela referênciada | Coluna(s) referênciada(s) | Indexar |
-| ----- | --------- | ------------------- | ------------------------- | ------- |
-| empresa | nomeEmpresa      | Empresa            | nomeEmpresa                        | Não     |
-
-
-### Tipo_Empresa
-
-#### DESCRIÇÃO <!-- omit in toc -->
-
-Tabela com informações sobre o tipo de empresa do fornecedor.
-
-#### COLUNAS <!-- omit in toc -->
-
-| Nome     | Descrição                 | Domínio     | por Omissão | Automático | Nulo |
-| :------- | :------------------------ | :---------- | :---------- | :--------- | :--- |
-| nomeEmpresa       | nome da empresa do fornecedor | VARCHAR(255)      | -           | Não        | Não  |
-| tipo     | tipo de fornecedor           | VARCHAR(255)        | -       | Não        | Não  |
-
-#### RESTRIÇÕES DE INTEGRIDADE <!-- omit in toc -->
-
-- **Chave Primária**: 
-
-| Coluna(s) |
-| --------- |
-| nomeEmpresa       |
 
 
 ### Empregado_Encomenda
