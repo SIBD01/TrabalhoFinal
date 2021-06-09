@@ -18,8 +18,6 @@ DROP TABLE IF EXISTS `Encomenda`;
 DROP TABLE IF EXISTS `LinhaEncomenda`;
 DROP TABLE IF EXISTS `Produto`;
 DROP TABLE IF EXISTS `Fornecedor`;
-DROP TABLE IF EXISTS `Empresa`;
-DROP TABLE IF EXISTS `Tipo_Empresa`;
 DROP TABLE IF EXISTS `Empregado_Encomenda`;
 DROP TABLE IF EXISTS `Encomenda_Fornecedor`;
 
@@ -38,7 +36,7 @@ CREATE TABLE IF NOT EXISTS `Reserva` (
 
 CREATE TABLE IF NOT EXISTS `Info_Mesa` (
   `nrMesa` int unsigned NOT NULL,
-  `dia` date unsigned NOT NULL,
+  `dia` int unsigned NOT NULL,
   `hora` time unsigned NOT NULL,
   `nrPessoas` int unsigned NOT NULL,
   PRIMARY KEY (`nrMesa`)
@@ -46,7 +44,7 @@ CREATE TABLE IF NOT EXISTS `Info_Mesa` (
 
 CREATE TABLE IF NOT EXISTS `Pedido` (
   `nrPedido` int unsigned NOT NULL AUTO_INCREMENT,
-  `nrTelefone` date unsigned NOT NULL,
+  `nrTelefone` int(9) unsigned NOT NULL,
   PRIMARY KEY (`nrPedido`, `nrTelefone`)
 );
 
@@ -56,7 +54,7 @@ CREATE TABLE IF NOT EXISTS `Info_Pedido` (
   `bebida` varchar(50) unsigned NOT NULL,
   `prato` varchar(50) unsigned NOT NULL,
   `sobremesa` varchar(50) unsigned NULL,
-  `cafe` boolean unsigned NULL,
+  `cafe` int unsigned NULL,
   PRIMARY KEY (`nrPedido`)
 );
 
@@ -77,6 +75,7 @@ CREATE TABLE IF NOT EXISTS `Info_Empregado` (
 
 CREATE TABLE IF NOT EXISTS `Encomenda` (
   `nrEncomenda` int unsigned NOT NULL AUTO_INCREMENT,
+  `data` int unsigned NOT NULL,
   PRIMARY KEY (`nrEncomenda`)
 );
 
@@ -95,19 +94,9 @@ CREATE TABLE IF NOT EXISTS `Produto` (
 
 CREATE TABLE IF NOT EXISTS `Fornecedor` (
   `numero` int unsigned NOT NULL,
+  `nomeEmpresa` varchar(255) unsigned NOT NULL,
+  `tipo` varchar(255) unsigned NOT NULL
   PRIMARY KEY (`numero`)
-);
-
-CREATE TABLE IF NOT EXISTS `Empresa` (
-  `numero` int unsigned NOT NULL,
-  `nomeEmpresa` varchar(255) unsigned NOT NULL,
-  PRIMARY KEY (`numero`, `nomeEmpresa`)
-);
-
-CREATE TABLE IF NOT EXISTS `Tipo_Empresa` (
-  `nomeEmpresa` varchar(255) unsigned NOT NULL,
-  `tipo` varchar(255) unsigned NOT NULL,
-  PRIMARY KEY (`nomeEmpresa`)
 );
 
 CREATE TABLE IF NOT EXISTS `Empregado_Encomenda` (
