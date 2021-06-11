@@ -5,26 +5,12 @@
 
 
 ```sql
-USE `test`;
-
-DROP TABLE IF EXISTS `Cliente`;
-DROP TABLE IF EXISTS `Reserva`;
-DROP TABLE IF EXISTS `Info_Mesa`;
-DROP TABLE IF EXISTS `Pedido`;
-DROP TABLE IF EXISTS `Info_Pedido`;
-DROP TABLE IF EXISTS `Empregado`;
-DROP TABLE IF EXISTS `Info_Empregado`;
-DROP TABLE IF EXISTS `Encomenda`;
-DROP TABLE IF EXISTS `LinhaEncomenda`;
-DROP TABLE IF EXISTS `Produto`;
-DROP TABLE IF EXISTS `Fornecedor`;
-DROP TABLE IF EXISTS `Empregado_Encomenda`;
-DROP TABLE IF EXISTS `Encomenda_Fornecedor`;
+USE `restaurante`;
 
 CREATE TABLE IF NOT EXISTS `Cliente` (
   `nrTelefone` int(9) unsigned NOT NULL,
-  `nome` varchar(50) unsigned NOT NULL,
-  `email` nvarchar(255) unsigned NOT NULL,
+  `nome` varchar(50) NOT NULL,
+  `email` nvarchar(255) NOT NULL,
   PRIMARY KEY (`nrTelefone`)
 );
 
@@ -36,25 +22,25 @@ CREATE TABLE IF NOT EXISTS `Reserva` (
 
 CREATE TABLE IF NOT EXISTS `Info_Mesa` (
   `nrMesa` int unsigned NOT NULL,
-  `dia` varchar(50) unsigned NOT NULL,
-  `hora` time unsigned NOT NULL,
+  `dia` int unsigned NOT NULL,
+  `hora` time NOT NULL,
   `nrPessoas` int unsigned NOT NULL,
   PRIMARY KEY (`nrMesa`)
 );
 
 CREATE TABLE IF NOT EXISTS `Pedido` (
   `nrPedido` int unsigned NOT NULL AUTO_INCREMENT,
-  `nrTelefone` int(9) unsigned NOT NULL,
+  `nrTelefone` int unsigned NOT NULL,
   PRIMARY KEY (`nrPedido`, `nrTelefone`)
 );
 
 CREATE TABLE IF NOT EXISTS `Info_Pedido` (
   `nrPedido` int unsigned NOT NULL AUTO_INCREMENT,
-  `entrada` varchar(50) unsigned NULL,
-  `bebida` varchar(50) unsigned NOT NULL,
-  `prato` varchar(50) unsigned NOT NULL,
-  `sobremesa` varchar(50) unsigned NULL,
-  `cafe` int unsigned NULL,
+  `entrada` varchar(50) NULL,
+  `bebida` varchar(50) NOT NULL,
+  `prato` varchar(50) NOT NULL,
+  `sobremesa` varchar(50) NULL,
+  `cafe` int NULL,
   PRIMARY KEY (`nrPedido`)
 );
 
@@ -62,20 +48,20 @@ CREATE TABLE IF NOT EXISTS `Empregado` (
   `nrEmpregado` int unsigned NOT NULL AUTO_INCREMENT,
   `nrPedido` int(9) unsigned NOT NULL,
   `nrMesa` int unsigned NOT NULL,
-  PRIMARY KEY (`nrMesa`)
+  PRIMARY KEY (`nrEmpregado`, `nrPedido`, `nrMesa`)
 );
 
 CREATE TABLE IF NOT EXISTS `Info_Empregado` (
   `nrEmpregado` int unsigned NOT NULL AUTO_INCREMENT,
-  `função` varchar(50) unsigned NOT NULL,
-  `nome` varchar(255) unsigned NOT NULL,
+  `função` varchar(50) NOT NULL,
+  `nome` varchar(255) NOT NULL,
   `nrCC` int(8) unsigned NOT NULL,
   PRIMARY KEY (`nrEmpregado`)
 );
 
 CREATE TABLE IF NOT EXISTS `Encomenda` (
   `nrEncomenda` int unsigned NOT NULL AUTO_INCREMENT,
-  `data` varchar(50) unsigned NOT NULL,
+  `data` int unsigned NOT NULL,
   PRIMARY KEY (`nrEncomenda`)
 );
 
@@ -88,14 +74,14 @@ CREATE TABLE IF NOT EXISTS `LinhaEncomenda` (
 
 CREATE TABLE IF NOT EXISTS `Produto` (
   `produtoCod` int unsigned NOT NULL,
-  `produto` varchar(255) unsigned NOT NULL,
+  `produto` varchar(255) NOT NULL,
   PRIMARY KEY (`produtoCod`)
 );
 
 CREATE TABLE IF NOT EXISTS `Fornecedor` (
   `numero` int unsigned NOT NULL,
-  `nomeEmpresa` varchar(255) unsigned NOT NULL,
-  `tipo` varchar(255) unsigned NOT NULL
+  `nomeEmpresa` varchar(255) NOT NULL,
+  `tipo` varchar(255) NOT NULL,
   PRIMARY KEY (`numero`)
 );
 
