@@ -142,7 +142,7 @@ Tabela com informações sobre o pedido.
 | bebida     | a bebida escolhida           | VARCHAR(50)        | -       | Não        | Não  |
 | prato    | o prato escolhido           | VARCHAR(50)        | -       | Não        | Não  |
 | sobremesa     | a sobremesa escolhida           | VARCHAR(50)        | -       | Não        | Sim  |
-| cafe     | o café escolhido           | BOOLEAN        | -       | Não        | Sim  |
+| cafe     | o café escolhido           | INT        | -       | Não        | Sim  |
 
 #### RESTRIÇÕES DE INTEGRIDADE <!-- omit in toc -->
 
