@@ -93,7 +93,7 @@ CREATE TABLE IF NOT EXISTS `Empregado_Encomenda` (
 
 CREATE TABLE IF NOT EXISTS `Encomenda_Fornecedor` (
   `produtoCod` int unsigned NOT NULL,
-  `numero` int unsigned NOT NULL,
+  `numero` int(9) unsigned NOT NULL,
   PRIMARY KEY (`produtoCod`, `numero`)
 );
 ```
