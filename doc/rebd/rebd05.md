@@ -22,7 +22,7 @@ CREATE TABLE IF NOT EXISTS `Reserva` (
 
 CREATE TABLE IF NOT EXISTS `Info_Mesa` (
   `nrMesa` int unsigned NOT NULL,
-  `dia` int unsigned NOT NULL,
+  `dia` varchar(50) unsigned NOT NULL,
   `hora` time NOT NULL,
   `nrPessoas` int unsigned NOT NULL,
   PRIMARY KEY (`nrMesa`)
