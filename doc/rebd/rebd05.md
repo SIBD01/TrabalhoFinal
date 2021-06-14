@@ -79,7 +79,7 @@ CREATE TABLE IF NOT EXISTS `Produto` (
 );
 
 CREATE TABLE IF NOT EXISTS `Fornecedor` (
-  `numero` int unsigned NOT NULL,
+  `numero` int(9) unsigned NOT NULL,
   `nomeEmpresa` varchar(255) NOT NULL,
   `tipo` varchar(255) NOT NULL,
   PRIMARY KEY (`numero`)
