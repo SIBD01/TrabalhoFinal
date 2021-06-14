@@ -46,7 +46,7 @@ CREATE TABLE IF NOT EXISTS `Info_Pedido` (
 
 CREATE TABLE IF NOT EXISTS `Empregado` (
   `nrEmpregado` int unsigned NOT NULL AUTO_INCREMENT,
-  `nrPedido` int(9) unsigned NOT NULL,
+  `nrPedido` int unsigned NOT NULL,
   `nrMesa` int unsigned NOT NULL,
   PRIMARY KEY (`nrEmpregado`, `nrPedido`, `nrMesa`)
 );
