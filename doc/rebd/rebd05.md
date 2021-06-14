@@ -61,7 +61,7 @@ CREATE TABLE IF NOT EXISTS `Info_Empregado` (
 
 CREATE TABLE IF NOT EXISTS `Encomenda` (
   `nrEncomenda` int unsigned NOT NULL AUTO_INCREMENT,
-  `data` int unsigned NOT NULL,
+  `data` varchar(50) unsigned NOT NULL,
   PRIMARY KEY (`nrEncomenda`)
 );
 
