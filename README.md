@@ -26,7 +26,6 @@ A [table](https://www.markdownguide.org/extended-syntax/#tables) may be usefull 
 * Loopback 4
 
 ## Relatórios
-_Please add at least a hyperlink per Report. But you can add more, for example for the individual report chapters._
 
 ### REI
 * [REI](doc/rei/rei00.md)
